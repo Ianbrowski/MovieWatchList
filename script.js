@@ -2,12 +2,24 @@ function addMovieToList(movieName) {
     const movieList = document.getElementById('movie-list');
     const newCard = createCard({ name: movieName, type: 'movie', watched: false });
     movieList.appendChild(newCard);
+
+    // Attach event listener for the delete button after appending the card
+    const deleteButton = newCard.querySelector('.delete-btn');
+    deleteButton.addEventListener('click', function() {
+        movieList.removeChild(newCard);
+    });
 }
 
 function addSeriesToList(seriesName) {
     const seriesList = document.getElementById('series-list');
     const newCard = createCard({ name: seriesName, type: 'series', watched: false });
     seriesList.appendChild(newCard);
+
+    // Attach event listener for the delete button after appending the card
+    const deleteButton = newCard.querySelector('.delete-btn');
+    deleteButton.addEventListener('click', function() {
+        seriesList.removeChild(newCard);
+    });
 }
 
 
