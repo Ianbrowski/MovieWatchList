@@ -1,38 +1,15 @@
-// Function to add a new movie to the list
 function addMovieToList(movieName) {
     const movieList = document.getElementById('movie-list');
-    const newCard = createCard(movieName);
-
-    // Add delete button to the card
-    const deleteButton = createDeleteButton();
-    newCard.appendChild(deleteButton);
-
-    // Append the new card to the movie list
+    const newCard = createCard({ name: movieName, type: 'movie', watched: false });
     movieList.appendChild(newCard);
-
-    // Add event listener to the delete button
-    deleteButton.addEventListener('click', function() {
-        movieList.removeChild(newCard);
-    });
 }
 
-// Function to add a new TV series to the list
 function addSeriesToList(seriesName) {
     const seriesList = document.getElementById('series-list');
-    const newCard = createCard(seriesName);
-
-    // Add delete button to the card
-    const deleteButton = createDeleteButton();
-    newCard.appendChild(deleteButton);
-
-    // Append the new card to the TV series list
+    const newCard = createCard({ name: seriesName, type: 'series', watched: false });
     seriesList.appendChild(newCard);
-
-    // Add event listener to the delete button
-    deleteButton.addEventListener('click', function() {
-        seriesList.removeChild(newCard);
-    });
 }
+
 
 // Helper function to create a card element
 function createCard(name) {
