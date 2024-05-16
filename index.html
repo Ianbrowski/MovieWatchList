@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian & Sandy's Movie List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+</head>
+<body>
+    <header><h1>MOVIE/SERIES WATCHIE LIST</h1></header>
+     <div class="space">
+    <div class="container">
+        <h2><i class="fas fa-film"></i> Movies</h2>
+        <!-- MOVIE LIST -->
+        <div id="movie-list">
+            <!-- Movie cards will be dynamically added here -->
+        </div>
+        <!-- Add Movie Form -->
+        <form id="add-movie-form">
+            <input type="text" id="new-movie" placeholder="Add a new movie" required>
+            <button  type="submit">Add Movie</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2><i class="fas fa-tv"></i> TV Series</h2>
+        <!-- TV SERIES LIST -->
+        <div id="series-list">
+            <!-- TV series cards will be dynamically added here -->
+        </div>
+        <!-- Add TV Series Form -->
+        <form id="add-series-form">
+            <input type="text" id="new-series" placeholder="Add a new series" required>
+            <button type="submit">Add Series</button>
+        </form>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
